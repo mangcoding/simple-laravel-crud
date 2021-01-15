@@ -58,9 +58,8 @@ class ProductController extends Controller
         return redirect()->route('product.view', ['message' => "product berhasil didelete"]);
 
     }
-    public function destroy() {
-
-        Product::find()->delete();
+    public function destroy($id) {
+        Product::find($id)->delete();
         return redirect()->route('product.view', ['message' => "product berhasil didelete"]);
 
     }

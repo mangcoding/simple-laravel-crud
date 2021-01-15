@@ -18,7 +18,7 @@ Route::get('/product/edit', [ProductController::class, 'edit'])->name("product.e
 Route::get('/product/add', [ProductController::class, 'addProduct'])->name("product.add");
 Route::post('/product', [ProductController::class, 'postProduct'])->name("product.store");
 Route::post('/product/save', [ProductController::class, 'saveProduct'])->name("product.saved");
-
+Route::delete('/product/destroy{id}', [ProductController::class, 'destroy'])->name("product.destroy");
 Route::get('/product', [ProductController::class, 'view'])->name("product.view");
 Route::get('/', [ProductController::class, 'view']);
 Route::get('/home', 'HomeController@index')->name('home');
